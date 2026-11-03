@@ -7,7 +7,7 @@ export const siteConfig: SiteConfig = {
   description:
     "An independent digital studio creating considered websites and web experiences for ambitious businesses.",
   locationLabel: "Independent digital studio · Kenya & beyond",
-  contactEmail: "hello@splendour.studio",
+  contactEmail: "jkibura001@gmail.com",
   navLinks: [
     {
       label: "Services",
