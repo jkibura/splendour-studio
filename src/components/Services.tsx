@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 import { services } from "../../data/services";
+import { pageContent } from "../../data/content";
 import type { Service } from "../types";
 import { Card } from "./ui/Card";
 
@@ -19,27 +20,6 @@ const iconMap: Record<string, LucideIcon> = {
   Search,
   ShieldCheck,
 };
-
-const approachSteps = [
-  {
-    number: "01",
-    title: "Understand the brief",
-    description:
-      "We establish your goals, audience, priorities, scope, and the practical constraints before defining a direction.",
-  },
-  {
-    number: "02",
-    title: "Design and build",
-    description:
-      "We turn the agreed direction into a considered interface and a responsive, maintainable implementation.",
-  },
-  {
-    number: "03",
-    title: "Refine and launch",
-    description:
-      "We review the details, test essential user journeys, prepare the handover, and help you move confidently into launch.",
-  },
-];
 
 function ServiceCard({ service }: { service: Service }) {
   const Icon = iconMap[service.icon] ?? Code2;
@@ -92,25 +72,23 @@ export function Services() {
         <div className="grid gap-10 lg:grid-cols-[0.72fr_1.28fr] lg:gap-16">
           <div className="max-w-lg">
             <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-zinc-500">
-              What we do
+              {pageContent.services.eyebrow}
             </p>
 
             <h2
               id="services-heading"
               className="mt-5 max-w-[12ch] text-4xl font-semibold leading-[1.1] tracking-[-0.055em] text-zinc-950 sm:text-5xl"
             >
-              Thoughtful work. Solid foundations.
+              {pageContent.services.title}
             </h2>
 
             <p className="mt-6 text-base leading-7 text-zinc-600">
-              Every engagement starts with the problem worth solving. We bring
-              design sensibility and engineering discipline together to create
-              digital experiences with a clear purpose.
+              {pageContent.services.description}
             </p>
 
             <div className="mt-8 border-l-2 border-zinc-900 pl-4">
               <p className="text-sm font-medium leading-6 text-zinc-800">
-                No unnecessary complexity. No detail without a reason.
+                {pageContent.services.principle}
               </p>
             </div>
           </div>
@@ -129,22 +107,21 @@ export function Services() {
           <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
             <div>
               <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-zinc-500">
-                How we work
+                {pageContent.services.approachEyebrow}
               </p>
 
               <h2 className="mt-4 text-3xl font-semibold tracking-tighter text-zinc-950 sm:text-4xl">
-                A clear path from idea to launch.
+                {pageContent.services.approachTitle}
               </h2>
             </div>
 
             <p className="max-w-md text-sm leading-6 text-zinc-600">
-              Good work needs more than good design. It needs clear decisions,
-              realistic scope, and a process that keeps everyone aligned.
+              {pageContent.services.approachDescription}
             </p>
           </div>
 
           <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-10">
-            {approachSteps.map((step) => (
+            {pageContent.approach.map((step) => (
               <div
                 key={step.number}
                 className="border-t border-zinc-200 pt-5"

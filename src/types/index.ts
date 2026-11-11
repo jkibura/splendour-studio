@@ -22,8 +22,6 @@ export interface Service {
   capabilities: string[];
 }
 
-export type ProjectVisual = "editorial" | "commerce" | "platform";
-
 export type ProjectGridSpan = 5 | 7 | 12;
 
 export interface Project {
@@ -33,7 +31,9 @@ export interface Project {
   year: number;
   description: string;
   tags: string[];
-  visual: ProjectVisual;
+  image: string;
+  imageAlt: string;
+  url?: string;
   gridSpan: ProjectGridSpan;
   status: "Concept study" | "Client project";
 }

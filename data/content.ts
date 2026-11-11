@@ -1,0 +1,46 @@
+// All editable copy for the page sections lives here; components only render it.
+export const pageContent = {
+  hero: {
+    eyebrow: "Independent digital studio",
+    heading: ["Websites that move", "businesses", "forward."],
+    description: "We combine thoughtful design and serious engineering to create digital experiences that make your business clearer, more credible, and ready for what's next.",
+    primaryAction: "Start a project",
+    secondaryAction: "Explore our work",
+    capabilities: "Websites · E-commerce · Digital products · Engineering",
+    preview: {
+      address: "yourbusiness.com",
+      label: "WEBSITE PREVIEW",
+      eyebrow: "Your next chapter starts here",
+      title: "Make a first impression that lasts.",
+      description: "A clear story. A considered experience. A website that reflects the quality of the business behind it.",
+      action: "Discover more",
+      note: "Designed with purpose.",
+      brand: "YOUR BRAND",
+      capabilities: ["STRATEGY", "DESIGN", "DEVELOPMENT", "PERFORMANCE", "SUPPORT"],
+    },
+  },
+  services: {
+    eyebrow: "What we do",
+    title: "Thoughtful work. Solid foundations.",
+    description: "Every engagement starts with the problem worth solving. We bring design sensibility and engineering discipline together to create digital experiences with a clear purpose.",
+    principle: "No unnecessary complexity. No detail without a reason.",
+    approachEyebrow: "How we work",
+    approachTitle: "A clear path from idea to launch.",
+    approachDescription: "Good work needs more than good design. It needs clear decisions, realistic scope, and a process that keeps everyone aligned.",
+  },
+  approach: [
+    { number: "01", title: "Understand the brief", description: "We establish your goals, audience, priorities, scope, and the practical constraints before defining a direction." },
+    { number: "02", title: "Design and build", description: "We turn the agreed direction into a considered interface and a responsive, maintainable implementation." },
+    { number: "03", title: "Refine and launch", description: "We review the details, test essential user journeys, prepare the handover, and help you move confidently into launch." },
+  ],
+  contact: {
+    eyebrow: "Have something in mind?",
+    title: "Let's make it worth putting on the web.",
+    description: "Tell us what you're building, what isn't working, or where you want to go next. We'll start with the problem, then work towards the right solution.",
+    action: "Start a project",
+    principlesEyebrow: "The way we work",
+    principles: ["Clear scope and expectations", "Direct communication", "A considered, maintainable result"],
+    closing: "Thoughtful by design. Accountable in execution.",
+    footerContact: "Get in touch",
+  },
+};

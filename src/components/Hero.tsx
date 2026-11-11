@@ -284,6 +284,7 @@ import {
   X,
 } from "lucide-react";
 import { siteConfig } from "../../data/siteConfig";
+import { pageContent } from "../../data/content";
 
 export function Hero() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -303,10 +304,10 @@ export function Hero() {
             className="flex shrink-0 flex-col leading-none"
           >
             <span className="text-base font-bold tracking-[0.16em] text-zinc-950">
-              SPLENDOUR
+                {siteConfig.name}
             </span>
             <span className="mt-1.5 self-end text-[9px] font-medium tracking-[0.3em] text-zinc-500">
-              STUDIO
+              {siteConfig.descriptor.toUpperCase()}
             </span>
           </a>
 
@@ -327,7 +328,7 @@ export function Hero() {
 
           <a
             href={projectHref}
-            className="hidden min-h-10 items-center gap-2 rounded-lg bg-[#087fe8] px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-blue-700 sm:inline-flex"
+            className="hidden min-h-10 items-center gap-2 rounded-lg bg-[var(--color-accent)] px-4 py-2 text-sm font-semibold text-white transition-colors hover:brightness-90 sm:inline-flex"
           >
             Start a project
             <ArrowUpRight size={15} />
@@ -364,7 +365,7 @@ export function Hero() {
 
             <a
               href={projectHref}
-              className="mt-4 flex min-h-12 items-center justify-center gap-2 rounded-lg bg-[#087fe8] px-5 text-sm font-semibold text-white"
+              className="mt-4 flex min-h-12 items-center justify-center gap-2 rounded-lg bg-[var(--color-accent)] px-5 text-sm font-semibold text-white"
             >
               Start a project
               <ArrowUpRight size={16} />
@@ -384,7 +385,7 @@ export function Hero() {
             <div className="inline-flex items-center gap-2.5 rounded-full border border-zinc-200 bg-white px-3.5 py-2">
               <span className="size-2 rounded-full bg-emerald-500" />
               <span className="text-[10px] font-semibold uppercase tracking-[0.14em] text-zinc-600 sm:text-xs">
-                Independent digital studio
+                {pageContent.hero.eyebrow}
               </span>
             </div>
 
@@ -392,44 +393,42 @@ export function Hero() {
               id="hero-heading"
               className="mx-auto mt-8 text-[3.2rem] font-bold leading-[1.02] tracking-[-0.075em] text-[#111111] sm:text-7xl lg:text-[6.4rem]"
             >
-              <span className="block">Websites that move</span>
+              <span className="block">{pageContent.hero.heading[0]}</span>
 
               <span className="mt-2 flex flex-wrap items-center justify-center gap-x-3 gap-y-2">
-                <span>businesses</span>
+                <span>{pageContent.hero.heading[1]}</span>
 
-                <span className="inline-flex items-center gap-3 rounded-full bg-[#bcebe6] px-4 py-1.5 text-[#111111] sm:px-6 sm:py-2">
-                  <span className="size-3.5 shrink-0 rounded-full bg-[#239b92] sm:size-5" />
-                  forward.
+                <span className="inline-flex items-center gap-3 rounded-full bg-[var(--color-highlight)] px-4 py-1.5 text-[#111111] sm:px-6 sm:py-2">
+                  <span className="size-3.5 shrink-0 rounded-full bg-[var(--color-highlight-ink)] sm:size-5" />
+                  {pageContent.hero.heading[2]}
                 </span>
               </span>
             </h1>
 
             <p className="mx-auto mt-7 max-w-3xl text-base leading-7 text-zinc-600 sm:text-lg sm:leading-8">
-              We combine thoughtful design and serious engineering to create
-              digital experiences that make your business clearer, more
-              credible, and ready for what's next.
+              {pageContent.hero.description}
             </p>
 
             <div className="mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
               <a
                 href={projectHref}
-                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-[#087fe8] px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-blue-700"
+                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-[var(--color-accent)] px-6 py-3 text-sm font-semibold text-white transition-colors hover:brightness-90"
               >
-                Start a project
+                {pageContent.hero.primaryAction}
                 <ArrowUpRight size={17} />
               </a>
 
               <a
                 href="#work"
-                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-[#e8f3ff] px-6 py-3 text-sm font-semibold text-[#075eb5] transition-colors hover:bg-[#d9eaff]"
+                className="inline-flex min-h-12 items-center justify-center gap-2 rounded-lg bg-[var(--color-accent-soft)] px-6 py-3 text-sm font-semibold text-[var(--color-accent-ink)] transition-colors hover:brightness-95"
               >
-                Explore our work
+                {pageContent.hero.secondaryAction}
                 <ArrowDown size={16} />
               </a>
             </div>
 
             <p className="mt-5 text-xs font-medium text-zinc-500">
-              Websites · E-commerce · Digital products · Engineering
+              {pageContent.hero.capabilities}
             </p>
           </div>
 
@@ -444,12 +443,12 @@ export function Hero() {
 
                 <div className="mx-auto flex max-w-sm flex-1 items-center justify-center rounded-md bg-zinc-100 px-3 py-1.5">
                   <span className="truncate text-[10px] text-zinc-500 sm:text-xs">
-                    yourbusiness.com
+                    {pageContent.hero.preview.address}
                   </span>
                 </div>
 
                 <span className="hidden text-[10px] font-medium text-zinc-400 sm:block">
-                  WEBSITE PREVIEW
+                  {pageContent.hero.preview.label}
                 </span>
               </div>
 
@@ -457,26 +456,25 @@ export function Hero() {
               <div className="grid min-h-75 gap-8 bg-[#fafafa] p-5 sm:min-h-95 sm:p-9 md:grid-cols-[0.9fr_1.1fr] md:items-center md:gap-10 lg:p-14">
                 <div className="max-w-lg py-3">
                   <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-blue-600 sm:text-xs">
-                    Your next chapter starts here
+                    {pageContent.hero.preview.eyebrow}
                   </p>
 
                   <h2 className="mt-5 max-w-md text-3xl font-bold leading-[1.08] tracking-[-0.06em] text-zinc-950 sm:text-5xl">
-                    Make a first impression that lasts.
+                    {pageContent.hero.preview.title}
                   </h2>
 
                   <p className="mt-4 max-w-md text-sm leading-6 text-zinc-600 sm:text-base sm:leading-7">
-                    A clear story. A considered experience. A website that
-                    reflects the quality of the business behind it.
+                    {pageContent.hero.preview.description}
                   </p>
 
                   <div className="mt-6 flex flex-wrap items-center gap-4">
                     <span className="inline-flex min-h-10 items-center gap-2 rounded-lg bg-zinc-950 px-4 text-xs font-semibold text-white">
-                      Discover more
+                      {pageContent.hero.preview.action}
                       <ArrowRight size={14} />
                     </span>
 
                     <span className="text-xs font-medium text-zinc-600">
-                      Designed with purpose.
+                      {pageContent.hero.preview.note}
                     </span>
                   </div>
                 </div>
@@ -485,12 +483,12 @@ export function Hero() {
                 <div className="relative min-h-52.5 overflow-hidden rounded-xl border border-zinc-200 bg-white p-4 sm:min-h-65 sm:p-6">
                   <div className="flex items-center justify-between border-b border-zinc-100 pb-4">
                     <div className="flex items-center gap-2">
-                      <span className="flex size-7 items-center justify-center rounded-md bg-[#bcebe6] text-xs font-bold text-zinc-950">
+                      <span className="flex size-7 items-center justify-center rounded-md bg-[var(--color-highlight)] text-xs font-bold text-zinc-950">
                         S
                       </span>
 
                       <span className="text-xs font-bold text-zinc-900">
-                        YOUR BRAND
+                        {pageContent.hero.preview.brand}
                       </span>
                     </div>
 
@@ -509,11 +507,11 @@ export function Hero() {
                       <div className="mt-2 h-1.5 w-5/6 rounded-full bg-zinc-200" />
                       <div className="mt-2 h-1.5 w-4/6 rounded-full bg-zinc-200" />
 
-                      <div className="mt-5 h-8 w-24 rounded-lg bg-[#087fe8]" />
+                      <div className="mt-5 h-8 w-24 rounded-lg bg-[var(--color-accent)]" />
                     </div>
 
-                    <div className="relative min-h-36 overflow-hidden rounded-lg bg-[#d9f1ed] p-3">
-                      <div className="absolute -right-5 -top-4 size-28 rounded-full border-14px border-[#a5ded7]" />
+                    <div className="relative min-h-36 overflow-hidden rounded-lg bg-[var(--color-highlight)] p-3">
+                      <div className="absolute -right-5 -top-4 size-28 rounded-full border-14px border-[var(--color-highlight-ink)]" />
 
                       <div className="absolute bottom-4 left-3 right-3 h-14 rounded-lg border border-white/80 bg-white/90 p-3">
                         <div className="h-1.5 w-3/4 rounded-full bg-zinc-800" />
@@ -532,13 +530,7 @@ export function Hero() {
 
               {/* Capabilities strip — not fabricated client logos */}
               <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-3 border-t border-zinc-200 bg-white px-4 py-5 sm:gap-x-10 sm:py-6">
-                {[
-                  "STRATEGY",
-                  "DESIGN",
-                  "DEVELOPMENT",
-                  "PERFORMANCE",
-                  "SUPPORT",
-                ].map((item) => (
+                {pageContent.hero.preview.capabilities.map((item) => (
                   <span
                     key={item}
                     className="text-[9px] font-bold tracking-[0.13em] text-zinc-500 sm:text-[10px]"

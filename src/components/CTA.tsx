@@ -1,12 +1,7 @@
 import { ArrowUpRight, Check } from "lucide-react";
 import { siteConfig } from "../../data/siteConfig";
+import { pageContent } from "../../data/content";
 import { Button } from "./ui/Button";
-
-const engagementPrinciples = [
-  "Clear scope and expectations",
-  "Direct communication",
-  "A considered, maintainable result",
-];
 
 export function CTA() {
   const projectHref = `mailto:${siteConfig.contactEmail}?subject=${encodeURIComponent(
@@ -35,20 +30,18 @@ export function CTA() {
             <div className="relative grid gap-10 lg:grid-cols-[1fr_0.55fr] lg:items-end lg:gap-16">
               <div>
                 <p className="text-[11px] font-semibold uppercase tracking-[0.19em] text-zinc-400">
-                  Have something in mind?
+                  {pageContent.contact.eyebrow}
                 </p>
 
                 <h2
                   id="contact-heading"
                   className="mt-6 max-w-[12ch] text-4xl font-semibold leading-[1.06] tracking-[-0.06em] text-white sm:text-5xl lg:text-[4.5rem]"
                 >
-                  Let&apos;s make it worth putting on the web.
+                  {pageContent.contact.title}
                 </h2>
 
                 <p className="mt-6 max-w-lg text-sm leading-7 text-zinc-300 sm:text-base sm:leading-8">
-                  Tell us what you&apos;re building, what isn&apos;t working,
-                  or where you want to go next. We&apos;ll start with the
-                  problem, then work towards the right solution.
+                  {pageContent.contact.description}
                 </p>
 
                 <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
@@ -59,7 +52,7 @@ export function CTA() {
                     icon={<ArrowUpRight size={17} strokeWidth={1.8} />}
                     className="w-full border-white bg-white text-zinc-950 hover:border-zinc-200 hover:bg-zinc-100 sm:w-auto"
                   >
-                    Start a project
+                    {pageContent.contact.action}
                   </Button>
 
                   <a
@@ -73,11 +66,11 @@ export function CTA() {
 
               <div className="border-t border-white/15 pt-7 lg:border-l lg:border-t-0 lg:pl-8 lg:pt-0">
                 <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-zinc-400">
-                  The way we work
+                  {pageContent.contact.principlesEyebrow}
                 </p>
 
                 <ul className="mt-5 space-y-4">
-                  {engagementPrinciples.map((principle) => (
+                  {pageContent.contact.principles.map((principle) => (
                     <li
                       key={principle}
                       className="flex items-start gap-3 text-sm leading-6 text-zinc-200"
@@ -96,7 +89,7 @@ export function CTA() {
                 </ul>
 
                 <p className="mt-8 border-t border-white/15 pt-5 text-xs leading-5 text-zinc-400">
-                  Thoughtful by design. Accountable in execution.
+                  {pageContent.contact.closing}
                 </p>
               </div>
             </div>
@@ -130,7 +123,7 @@ export function CTA() {
                 href={`mailto:${siteConfig.contactEmail}`}
                 className="transition-colors hover:text-zinc-950"
               >
-                Get in touch
+                {pageContent.contact.footerContact}
               </a>
 
               <span aria-hidden="true" className="text-zinc-300">

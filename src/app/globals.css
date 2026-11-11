@@ -7,10 +7,23 @@
 
 :root {
   color-scheme: light;
+  /* Central design controls: adjust these to retune the full site. */
   --color-page: #ffffff;
+  --color-surface: #fafaf9;
   --color-ink: #18181b;
   --color-muted: #71717a;
   --color-line: #e4e4e7;
+  --color-accent: #087fe8;
+  --color-accent-soft: #e8f3ff;
+  --color-accent-ink: #075eb5;
+  --color-highlight: #bcebe6;
+  --color-highlight-ink: #239b92;
+  --color-image-placeholder: #e9e8e3;
+  --font-body: var(--font-inter), Inter, ui-sans-serif, system-ui, sans-serif;
+  --font-heading: Georgia, "Times New Roman", serif;
+  --content-width: 80rem;
+  --section-space: 6rem;
+  --card-radius: 1.4rem;
 }
 
 html {
@@ -25,7 +38,7 @@ body {
   min-height: 100vh;
   background: var(--color-page);
   color: var(--color-ink);
-  font-family: var(--font-inter), Inter, ui-sans-serif, system-ui, sans-serif;
+  font-family: var(--font-body);
   font-feature-settings:
     "cv02" 1,
     "cv03" 1,

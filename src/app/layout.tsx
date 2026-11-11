@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import type { ReactNode } from "react";
+import { siteConfig } from "../../data/siteConfig";
 import "./globals.css";
 
 const inter = Inter({
@@ -11,12 +12,12 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "SPLENDOUR Studio — Thoughtful Design. Serious Engineering.",
-    template: "%s | SPLENDOUR Studio",
+    default: `${siteConfig.name} ${siteConfig.descriptor} — ${siteConfig.tagline}`,
+    template: `%s | ${siteConfig.name} ${siteConfig.descriptor}`,
   },
   description:
-    "An independent digital studio creating considered websites and web experiences for ambitious businesses. Thoughtful design, serious engineering, and a clear path from idea to launch.",
-  applicationName: "SPLENDOUR Studio",
+    `${siteConfig.description} ${siteConfig.tagline}, and a clear path from idea to launch.`,
+  applicationName: `${siteConfig.name} ${siteConfig.descriptor}`,
   keywords: [
     "web development studio",
     "website design",
