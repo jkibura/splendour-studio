@@ -16,6 +16,7 @@ export const projects: Project[] = [
     imageFocus: "right",
     gridSpan: 7,
     status: "Client project",
+    url: "https://keli-ecom.vercel.app"
   },
   {
     id: "script-iq",
@@ -30,6 +31,7 @@ export const projects: Project[] = [
     imageFocus: "right",
     gridSpan: 5,
     status: "Client project",
+    url: "https://script-iq-alpha.vercel.app"
   },
   {
     id: "psychology-practice",
@@ -44,6 +46,7 @@ export const projects: Project[] = [
     imageFocus: "far-right",
     gridSpan: 12,
     status: "Client project",
+    url: "https://psyd-two.vercel.app"
   },
 ];
 

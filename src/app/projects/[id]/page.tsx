@@ -20,7 +20,26 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
   const { id } = await params;
   const project = projects.find((item) => item.id === id);
   return project
-    ? { title: `${project.title} — ${projectPageContent.metadataSuffix}`, description: project.description }
+    ? {
+        title: `${project.title} — ${projectPageContent.metadataSuffix}`,
+        description: project.description,
+        alternates: siteConfig.siteUrl
+          ? { canonical: `/projects/${project.id}` }
+          : undefined,
+        robots: { index: Boolean(project.caseStudy), follow: true },
+        openGraph: {
+          type: "article",
+          title: `${project.title} — ${projectPageContent.metadataSuffix}`,
+          description: project.description,
+          images: siteConfig.siteUrl ? [project.image] : undefined,
+        },
+        twitter: {
+          card: "summary_large_image",
+          title: `${project.title} — ${projectPageContent.metadataSuffix}`,
+          description: project.description,
+          images: siteConfig.siteUrl ? [project.image] : undefined,
+        },
+      }
     : { title: "Project not found" };
 }
 
@@ -46,7 +65,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           </div>
         </header>
 
-        <div className="relative aspect-[4/3] overflow-hidden rounded-[1.5rem] border border-zinc-200 bg-[var(--color-image-placeholder)] md:aspect-[16/9] sm:rounded-[2rem]">
+        <div className="relative min-h-68 overflow-hidden rounded-[1.5rem] border border-zinc-200 bg-[var(--color-image-placeholder)] sm:min-h-80 md:aspect-[16/9] md:min-h-0 sm:rounded-[2rem]">
           <Image src={project.image} alt={project.imageAlt} fill priority sizes="(min-width: 1280px) 1280px, 100vw" className={`object-cover ${projectImageFocusClasses[project.imageFocus ?? "center"]}`} />
         </div>
 

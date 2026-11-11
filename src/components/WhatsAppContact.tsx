@@ -13,12 +13,15 @@ export function WhatsAppContact() {
       statusMessage={siteConfig.whatsapp.statusMessage}
       chatMessage={siteConfig.whatsapp.chatMessage}
       openChatOnClick
-      allowClickAway
+      allowClickAway={false}
       allowEsc
       notification={false}
       notificationSound={false}
+      chatboxHeight={480}
+      className="splendour-whatsapp"
+      buttonClassName="splendour-whatsapp-button"
+      chatboxClassName="splendour-whatsapp-chatbox"
       style={{ zIndex: 40 }}
-      buttonStyle={{ transform: "scale(0.8)" }}
     />
   );
 }

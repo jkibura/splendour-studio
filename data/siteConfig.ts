@@ -3,16 +3,17 @@ import type { SiteConfig } from "../src/types";
 export const siteConfig: SiteConfig = {
   name: "SPLENDOUR",
   descriptor: "Studio",
+  siteUrl: process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, ""),
   tagline: "Thoughtful design. Serious engineering.",
   description:
-    "An independent digital studio creating considered websites and web experiences for ambitious businesses.",
-  locationLabel: "Independent digital studio · Kenya & beyond",
+    "SPLENDOUR Studio is an independent web design and development studio serving businesses across Kenya and internationally. We build bespoke business websites, e-commerce experiences, and custom digital products.",
+  locationLabel: "Serving Kenya & international clients",
   contactEmail: "jkibura001@gmail.com",
   whatsapp: {
     phoneNumber: "254799805123",
     accountName: "SPLENDOUR Studio",
-    statusMessage: "Typically replies within a business day",
-    chatMessage: "Hello! I’d like to discuss a project.",
+    statusMessage: "Tell us what you’re building",
+    chatMessage: "Hi there! 👋 Welcome to SPLENDOUR Studio. How can we help you today?",
   },
   navLinks: [
     {

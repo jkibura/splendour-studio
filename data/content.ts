@@ -1,9 +1,9 @@
 // All editable copy for the page sections lives here; components only render it.
 export const pageContent = {
   hero: {
-    eyebrow: "Independent digital studio",
+    eyebrow: "Serving Kenya & international clients",
     heading: ["Websites that move", "businesses", "forward."],
-    description: "We combine thoughtful design and serious engineering to create digital experiences that make your business clearer, more credible, and ready for what's next.",
+    description: "We design and build business websites, e-commerce stores, and digital products for clients across Kenya and internationally—pairing thoughtful design with serious engineering.",
     primaryAction: "Start a project",
     secondaryAction: "Explore our work",
     capabilities: "Websites · E-commerce · Digital products · Engineering",

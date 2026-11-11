@@ -14,7 +14,7 @@ const gridSpanClasses: Record<Project["gridSpan"], string> = {
 
 function ProjectImage({ project }: { project: Project }) {
   return (
-    <div className="project-image relative aspect-[4/3] overflow-hidden bg-[var(--color-image-placeholder)] md:aspect-[16/9]">
+    <div className="project-image relative min-h-68 overflow-hidden bg-[var(--color-image-placeholder)] sm:min-h-80">
       <Image
         src={project.image}
         alt={project.imageAlt}
@@ -46,7 +46,7 @@ export function Projects() {
           <p className="max-w-sm text-sm leading-6 text-zinc-600">{projectsContent.introduction}</p>
         </div>
 
-        <div className="mt-14 grid grid-cols-1 gap-7 md:mt-16 md:grid-cols-12 md:gap-8">
+        <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-12">
           {projects.map((project) => (
             <article key={project.id} className={gridSpanClasses[project.gridSpan]}>
               <Card className="group h-full overflow-hidden rounded-[1.4rem] border-zinc-200 shadow-none transition-colors duration-200 hover:border-zinc-300">

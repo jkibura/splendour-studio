@@ -6,6 +6,7 @@ export interface NavigationLink {
 export interface SiteConfig {
   name: string;
   descriptor: string;
+  siteUrl?: string;
   tagline: string;
   description: string;
   locationLabel: string;

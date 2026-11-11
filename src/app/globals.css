@@ -18,6 +18,7 @@
   --color-accent-ink: #075eb5;
   --color-highlight: #bcebe6;
   --color-highlight-ink: #239b92;
+  --color-whatsapp: #239b92;
   --color-image-placeholder: #e9e8e3;
   --font-body: var(--font-inter), Inter, ui-sans-serif, system-ui, sans-serif;
   --font-heading: Georgia, "Times New Roman", serif;
@@ -100,6 +101,53 @@ button {
 
 .skip-link:focus {
   transform: translateY(0);
+}
+
+/* Quiet, brand-matched WhatsApp control with a generous mobile tap target. */
+.splendour-whatsapp-button {
+  width: 56px !important;
+  height: 56px !important;
+  right: 24px !important;
+  bottom: 24px !important;
+  background-color: var(--color-whatsapp) !important;
+  box-shadow: 0 8px 24px -12px rgb(24 24 27 / 45%) !important;
+}
+
+.splendour-whatsapp-button::after {
+  content: none !important;
+  animation: none !important;
+}
+
+.splendour-whatsapp-chatbox {
+  width: min(375px, calc(100vw - 32px)) !important;
+  right: 24px !important;
+  bottom: 92px !important;
+  max-height: calc(100dvh - 112px) !important;
+  border-radius: 1.25rem !important;
+}
+
+.splendour-whatsapp-button:focus-visible,
+.splendour-whatsapp-chatbox button:focus-visible,
+.splendour-whatsapp-chatbox input:focus-visible {
+  outline: 2px solid var(--color-whatsapp);
+  outline-offset: 3px;
+}
+
+@media (max-width: 575px) {
+  .splendour-whatsapp-button {
+    right: 16px !important;
+    bottom: 16px !important;
+  }
+
+  .splendour-whatsapp-chatbox {
+    left: 16px !important;
+    right: 16px !important;
+    bottom: 84px !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 !important;
+    max-height: calc(100dvh - 100px) !important;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
