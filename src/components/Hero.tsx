@@ -299,7 +299,7 @@ export function Hero() {
       {/* Navigation */}
       <header className="relative z-20 border-b border-zinc-200 bg-white">
         <div className="mx-auto flex min-h-19 max-w-7xl items-center justify-between gap-6 px-5 sm:px-8 lg:px-12">
-          <a
+          {/* <a
             href="#hero-content"
             aria-label="SPLENDOUR Studio home"
             className="inline-flex shrink-0 items-center rounded-sm transition-opacity hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-zinc-900"
@@ -312,6 +312,21 @@ export function Hero() {
               priority
               className="h-11 w-auto"
             />
+          </a> */}
+          
+            <a
+            href="#hero-content"
+            aria-label="SPLENDOUR Studio home"
+            className="flex shrink-0 flex-col leading-none"
+          >
+            <span className="text-base font-bold tracking-[0.16em] text-zinc-950">
+              {/* SPLENDOUR */}
+                {siteConfig.name}
+            </span>
+            <span className="mt-1.5 self-end text-[9px] font-medium tracking-[0.3em] text-zinc-500">
+              {/* STUDIO */}
+              {siteConfig.descriptor.toUpperCase()}
+            </span>
           </a>
 
           <nav

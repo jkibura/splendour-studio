@@ -52,7 +52,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   const detailImageAlt = project.detailImageAlt ?? project.imageAlt;
 
   return (
-    <main className="min-h-screen bg-[var(--color-surface)]">
+    <main className="min-h-screen bg-(--color-surface)">
       <div className="mx-auto max-w-7xl px-5 pb-20 pt-8 sm:px-8 sm:pb-28 sm:pt-10 lg:px-12">
         <Link href="/#work" className="inline-flex items-center gap-2 text-sm font-medium text-zinc-600 transition-colors hover:text-zinc-950">
           <ArrowLeft size={16} aria-hidden="true" />
@@ -68,7 +68,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           </div>
         </header>
 
-        <div className="relative min-h-68 overflow-hidden rounded-[1.5rem] border border-zinc-200 bg-[var(--color-image-placeholder)] sm:min-h-80 md:aspect-[16/9] md:min-h-0 sm:rounded-[2rem]">
+        <div className="relative min-h-68 overflow-hidden rounded-3xl border border-zinc-200 bg-[var(--color-image-placeholder)] sm:min-h-80 md:aspect-[16/9] md:min-h-0 sm:rounded-[2rem]">
           <Image src={detailImage} alt={detailImageAlt} fill priority sizes="(min-width: 1280px) 1280px, 100vw" className={`object-cover ${projectImageFocusClasses[project.detailImageFocus ?? project.imageFocus ?? "center"]}`} />
         </div>
 
