@@ -21,7 +21,7 @@
 //   return (
 //     <>
 //       <header className="relative z-20 border-b border-zinc-200/80 bg-white">
-//         <div className="mx-auto flex min-h-[76px] max-w-7xl items-center justify-between gap-6 px-5 sm:px-8 lg:px-12">
+//         <div className="mx-auto flex min-h-19 max-w-7xl items-center justify-between gap-6 px-5 sm:px-8 lg:px-12">
 //           <a
 //             href="#hero-content"
 //             aria-label="SPLENDOUR Studio home"
@@ -296,7 +296,7 @@ export function Hero() {
     <>
       {/* Navigation */}
       <header className="relative z-20 border-b border-zinc-200 bg-white">
-        <div className="mx-auto flex min-h-[76px] max-w-7xl items-center justify-between gap-6 px-5 sm:px-8 lg:px-12">
+        <div className="mx-auto flex min-h-19 max-w-7xl items-center justify-between gap-6 px-5 sm:px-8 lg:px-12">
           <a
             href="#hero-content"
             aria-label="SPLENDOUR Studio home"
@@ -454,7 +454,7 @@ export function Hero() {
               </div>
 
               {/* Preview content */}
-              <div className="grid min-h-[300px] gap-8 bg-[#fafafa] p-5 sm:min-h-[380px] sm:p-9 md:grid-cols-[0.9fr_1.1fr] md:items-center md:gap-10 lg:p-14">
+              <div className="grid min-h-75 gap-8 bg-[#fafafa] p-5 sm:min-h-95 sm:p-9 md:grid-cols-[0.9fr_1.1fr] md:items-center md:gap-10 lg:p-14">
                 <div className="max-w-lg py-3">
                   <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-blue-600 sm:text-xs">
                     Your next chapter starts here
@@ -482,7 +482,7 @@ export function Hero() {
                 </div>
 
                 {/* Interface illustration built with CSS */}
-                <div className="relative min-h-[210px] overflow-hidden rounded-xl border border-zinc-200 bg-white p-4 sm:min-h-[260px] sm:p-6">
+                <div className="relative min-h-52.5 overflow-hidden rounded-xl border border-zinc-200 bg-white p-4 sm:min-h-65 sm:p-6">
                   <div className="flex items-center justify-between border-b border-zinc-100 pb-4">
                     <div className="flex items-center gap-2">
                       <span className="flex size-7 items-center justify-center rounded-md bg-[#bcebe6] text-xs font-bold text-zinc-950">
@@ -513,7 +513,7 @@ export function Hero() {
                     </div>
 
                     <div className="relative min-h-36 overflow-hidden rounded-lg bg-[#d9f1ed] p-3">
-                      <div className="absolute -right-5 -top-4 size-28 rounded-full border-[14px] border-[#a5ded7]" />
+                      <div className="absolute -right-5 -top-4 size-28 rounded-full border-14px border-[#a5ded7]" />
 
                       <div className="absolute bottom-4 left-3 right-3 h-14 rounded-lg border border-white/80 bg-white/90 p-3">
                         <div className="h-1.5 w-3/4 rounded-full bg-zinc-800" />

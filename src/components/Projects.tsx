@@ -14,7 +14,7 @@ function ProjectArtwork({ project }: { project: Project }) {
     return (
       <div
         aria-hidden="true"
-        className="relative min-h-[17rem] overflow-hidden bg-[#eae6df] p-5 sm:min-h-[20rem] sm:p-7"
+        className="relative min-h-68 overflow-hidden bg-[#eae6df] p-5 sm:min-h-80 sm:p-7"
       >
         <div className="flex items-center justify-between border-b border-zinc-700/15 pb-3">
           <span className="text-[9px] font-semibold tracking-[0.23em] text-zinc-700">
@@ -45,7 +45,7 @@ function ProjectArtwork({ project }: { project: Project }) {
             </p>
           </div>
 
-          <div className="relative aspect-[3/4] overflow-hidden bg-[#d2ccc1] p-3 sm:p-4">
+          <div className="relative aspect-3/4 overflow-hidden bg-[#d2ccc1] p-3 sm:p-4">
             <div className="absolute inset-[12%] border border-zinc-700/40" />
 
             <div className="absolute bottom-[12%] left-[12%] right-[12%] top-[12%] grid grid-cols-2 gap-1">
@@ -60,10 +60,10 @@ function ProjectArtwork({ project }: { project: Project }) {
         </div>
 
         <div className="mt-6 flex items-center justify-between border-t border-zinc-700/15 pt-3">
-          <span className="text-[9px] tracking-[0.1em] text-zinc-600">
+          <span className="text-[9px] tracking-widest text-zinc-600">
             SELECTED PROJECTS
           </span>
-          <span className="text-[9px] tracking-[0.1em] text-zinc-600">
+          <span className="text-[9px] tracking-widest text-zinc-600">
             01 — 04
           </span>
         </div>
@@ -75,14 +75,14 @@ function ProjectArtwork({ project }: { project: Project }) {
     return (
       <div
         aria-hidden="true"
-        className="relative min-h-[17rem] overflow-hidden bg-zinc-950 p-5 text-white sm:min-h-[20rem] sm:p-7"
+        className="relative min-h-68 overflow-hidden bg-zinc-950 p-5 text-white sm:min-h-80 sm:p-7"
       >
         <div className="flex items-center justify-between border-b border-white/15 pb-3">
           <span className="text-[10px] font-semibold tracking-[0.18em]">
             GOODWELL
           </span>
 
-          <span className="text-[9px] tracking-[0.1em] text-zinc-400">
+          <span className="text-[9px] tracking-widest text-zinc-400">
             OBJECTS FOR EVERY DAY
           </span>
         </div>
@@ -145,8 +145,8 @@ function ProjectArtwork({ project }: { project: Project }) {
   return (
     <div
       aria-hidden="true"
-      className="relative min-h-[17rem] overflow-hidden bg-[#eeefec] p-5 sm:min-h-[20rem] sm:p-7"
-    >
+      className="relative min-h-68 overflow-hidden bg-[#eeefec] p-5 sm:min-h-80 sm:p-7"
+      >
       <div className="flex items-center justify-between border-b border-zinc-300 pb-3">
         <span className="text-[9px] font-semibold uppercase tracking-[0.16em] text-zinc-800">
           MERIDIAN / SYSTEMS
@@ -188,7 +188,7 @@ function ProjectArtwork({ project }: { project: Project }) {
               <span className="block text-[8px] text-zinc-500">
                 Active projects
               </span>
-              <span className="mt-1.5 block text-xl font-semibold tracking-[-0.05em] text-zinc-900">
+              <span className="mt-1.5 block text-xl font-semibold tracking-widest text-zinc-900">
                 08
               </span>
             </div>
@@ -197,7 +197,7 @@ function ProjectArtwork({ project }: { project: Project }) {
               <span className="block text-[8px] text-zinc-500">
                 In progress
               </span>
-              <span className="mt-1.5 block text-xl font-semibold tracking-[-0.05em] text-zinc-900">
+              <span className="mt-1.5 block text-xl font-semibold tracking-widest text-zinc-900">
                 04
               </span>
             </div>

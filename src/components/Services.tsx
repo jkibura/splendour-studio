@@ -132,7 +132,7 @@ export function Services() {
                 How we work
               </p>
 
-              <h2 className="mt-4 text-3xl font-semibold tracking-[-0.05em] text-zinc-950 sm:text-4xl">
+              <h2 className="mt-4 text-3xl font-semibold tracking-tighter text-zinc-950 sm:text-4xl">
                 A clear path from idea to launch.
               </h2>
             </div>
