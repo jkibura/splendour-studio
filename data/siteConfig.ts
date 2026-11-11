@@ -11,9 +11,9 @@ export const siteConfig: SiteConfig = {
   contactEmail: "jkibura001@gmail.com",
   whatsapp: {
     phoneNumber: "254799805123",
-    accountName: "SPLENDOUR Studio",
+    accountName: "Splendour Studio",
     statusMessage: "Tell us what you’re building",
-    chatMessage: "Hi there! 👋 Welcome to SPLENDOUR Studio. How can we help you today?",
+    chatMessage: "Hi there! 👋 Welcome to Splendour Studio. How can we help you today?",
   },
   navLinks: [
     {

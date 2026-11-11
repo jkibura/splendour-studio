@@ -17,7 +17,7 @@ export function WhatsAppContact() {
       allowEsc
       notification={false}
       notificationSound={false}
-      chatboxHeight={480}
+      // chatboxHeight={480}
       className="splendour-whatsapp"
       buttonClassName="splendour-whatsapp-button"
       chatboxClassName="splendour-whatsapp-chatbox"

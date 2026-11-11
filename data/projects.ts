@@ -11,7 +11,7 @@ export const projects: Project[] = [
     description:
       "An online store for Keli, designed to make discovering the collection and shopping for its products feel simple and considered.",
     tags: ["E-commerce", "Online store", "Responsive design"],
-    image: "/projects/keli.webp",
+    image: "/projects/keli-logo.webp",
     imageAlt: "Keli online store project",
     imageFocus: "right",
     gridSpan: 7,
@@ -26,7 +26,7 @@ export const projects: Project[] = [
     description:
       "A distinctive digital home for a notebook brand, bringing its products and point of view together in a clear, welcoming storefront.",
     tags: ["Brand experience", "E-commerce", "Product design"],
-    image: "/projects/script-iq.webp",
+    image: "/projects/script-iq-logo.webp",
     imageAlt: "Script IQ notebook brand project",
     imageFocus: "right",
     gridSpan: 5,
