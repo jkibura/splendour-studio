@@ -7,6 +7,8 @@
 
 Put project screenshots in `public/projects/` and update the matching `image` path in `projects.ts`. Landscape 16:9 screenshots work well; use `imageAlt` to describe each real image. Add a project's live site to its optional `url` to make the external link active.
 
+Use optional `cardImage` and `cardImageAlt` when a project needs a lightweight custom card visual. Use `detailImage` and `detailImageAlt` for the larger screenshot on its project page. The psychology card uses an SVG preview while its detail page keeps the full screenshot; Keli and Script IQ use their wordmarks on the cards and full-page captures on their detail pages.
+
 Global colors, fonts and key layout values are in `src/app/globals.css` under `:root`.
 
 For canonical URLs, Open Graph links, and an absolute sitemap, copy `.env.example` to `.env.local` and set `NEXT_PUBLIC_SITE_URL` to the production domain (see `.env.example`). Add the same variable in the production host's environment settings, then redeploy. Project detail pages stay out of the sitemap and search index until their factual case study details are added to `projects.ts`.

@@ -42,6 +42,9 @@ export interface Project {
   image: string;
   imageAlt: string;
   imageFocus?: "center" | "right" | "far-right";
+  detailImage?: string;
+  detailImageAlt?: string;
+  detailImageFocus?: "center" | "right" | "far-right";
   cardImage?: string;
   cardImageAlt?: string;
   cardImageFocus?: "center" | "right" | "far-right";

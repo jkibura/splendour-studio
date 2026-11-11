@@ -19,6 +19,7 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: ProjectPageProps): Promise<Metadata> {
   const { id } = await params;
   const project = projects.find((item) => item.id === id);
+  const projectImage = project?.detailImage ?? project?.image;
   return project
     ? {
         title: `${project.title} — ${projectPageContent.metadataSuffix}`,
@@ -31,13 +32,13 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
           type: "article",
           title: `${project.title} — ${projectPageContent.metadataSuffix}`,
           description: project.description,
-          images: siteConfig.siteUrl ? [project.image] : undefined,
+          images: siteConfig.siteUrl && projectImage ? [projectImage] : undefined,
         },
         twitter: {
           card: "summary_large_image",
           title: `${project.title} — ${projectPageContent.metadataSuffix}`,
           description: project.description,
-          images: siteConfig.siteUrl ? [project.image] : undefined,
+          images: siteConfig.siteUrl && projectImage ? [projectImage] : undefined,
         },
       }
     : { title: "Project not found" };
@@ -47,6 +48,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
   const { id } = await params;
   const project = projects.find((item) => item.id === id);
   if (!project) notFound();
+  const detailImage = project.detailImage ?? project.image;
+  const detailImageAlt = project.detailImageAlt ?? project.imageAlt;
 
   return (
     <main className="min-h-screen bg-[var(--color-surface)]">
@@ -66,7 +69,7 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
         </header>
 
         <div className="relative min-h-68 overflow-hidden rounded-[1.5rem] border border-zinc-200 bg-[var(--color-image-placeholder)] sm:min-h-80 md:aspect-[16/9] md:min-h-0 sm:rounded-[2rem]">
-          <Image src={project.image} alt={project.imageAlt} fill priority sizes="(min-width: 1280px) 1280px, 100vw" className={`object-cover ${projectImageFocusClasses[project.imageFocus ?? "center"]}`} />
+          <Image src={detailImage} alt={detailImageAlt} fill priority sizes="(min-width: 1280px) 1280px, 100vw" className={`object-cover ${projectImageFocusClasses[project.detailImageFocus ?? project.imageFocus ?? "center"]}`} />
         </div>
 
         <div className="grid gap-10 border-b border-zinc-200 py-12 sm:py-16 md:grid-cols-[0.65fr_1fr] md:gap-16">
