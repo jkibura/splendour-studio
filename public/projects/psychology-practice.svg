@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" fill="none" role="img" aria-labelledby="title desc">
+  <title id="title">Psychology practice website preview</title>
+  <desc id="desc">A calm, minimal website concept with a welcoming headline and an abstract portrait illustration.</desc>
+  <rect width="1200" height="700" fill="#E8EEE9"/>
+  <rect x="38" y="36" width="1124" height="628" rx="24" fill="#FCFCFA" stroke="#DDE4DE" stroke-width="2"/>
+  <path d="M39 132H1161" stroke="#E5E9E5" stroke-width="2"/>
+  <text x="88" y="91" fill="#263731" font-family="Georgia,serif" font-size="25">Dr. Sarah Mitchell, PsyD</text>
+  <text x="776" y="88" fill="#65756D" font-family="Arial,sans-serif" font-size="13" letter-spacing="2">ABOUT</text>
+  <text x="870" y="88" fill="#65756D" font-family="Arial,sans-serif" font-size="13" letter-spacing="2">SERVICES</text>
+  <text x="976" y="88" fill="#65756D" font-family="Arial,sans-serif" font-size="13" letter-spacing="2">APPROACH</text>
+  <rect x="1045" y="62" width="82" height="36" rx="18" fill="#4D7B6D"/>
+  <circle cx="1080" cy="80" r="3" fill="#EAF2ED"/>
+  <text x="1101" y="85" fill="#FFFFFF" font-family="Arial,sans-serif" font-size="11" text-anchor="middle">CONTACT</text>
+  <text x="88" y="220" fill="#4D7B6D" font-family="Arial,sans-serif" font-size="12" font-weight="700" letter-spacing="3">A THOUGHTFUL SPACE FOR CARE</text>
+  <text x="84" y="302" fill="#252A26" font-family="Georgia,serif" font-size="59">A calmer place</text>
+  <text x="84" y="369" fill="#252A26" font-family="Georgia,serif" font-size="59">to begin.</text>
+  <text x="88" y="421" fill="#69736D" font-family="Arial,sans-serif" font-size="17">A clear, welcoming introduction to a psychology practice.</text>
+  <text x="88" y="449" fill="#69736D" font-family="Arial,sans-serif" font-size="17">Designed to make finding support feel more approachable.</text>
+  <rect x="88" y="490" width="176" height="48" rx="8" fill="#4D7B6D"/>
+  <text x="176" y="519" fill="#FFFFFF" font-family="Arial,sans-serif" font-size="13" font-weight="600" text-anchor="middle" letter-spacing=".6">EXPLORE THE PRACTICE</text>
+  <text x="88" y="590" fill="#839087" font-family="Arial,sans-serif" font-size="12" letter-spacing="1.8">PSYCHOLOGY · PRIVATE PRACTICE</text>
+  <rect x="728" y="164" width="366" height="428" rx="183" fill="#E5ECE5"/>
+  <circle cx="911" cy="329" r="95" fill="#C7D8CC"/>
+  <path d="M829 527c12-75 43-116 82-116s70 41 82 116" fill="#78988A"/>
+  <path d="M873 322c0-45 17-71 43-71s43 26 43 71c0 43-18 74-43 74s-43-31-43-74Z" fill="#E5BFA5"/>
+  <path d="M866 321c-3-48 17-84 52-84 33 0 52 29 49 74-10-5-17-15-22-28-19 18-47 28-79 28v10Z" fill="#4C5149"/>
+  <path d="M875 352c9 14 23 22 41 22s32-8 41-22" stroke="#B87D6E" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="1013" cy="211" r="9" fill="#B8CFC0"/>
+  <path d="M778 554c16-24 27-34 43-37" stroke="#96B4A0" stroke-width="3" stroke-linecap="round"/>
+  <path d="M800 532c-17-16-20-31-11-44 17 8 23 22 11 44ZM815 522c-1-23 8-37 27-41 4 18-5 32-27 41Z" fill="#96B4A0"/>
+</svg>

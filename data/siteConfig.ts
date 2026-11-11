@@ -3,6 +3,10 @@ import type { SiteConfig } from "../src/types";
 export const siteConfig: SiteConfig = {
   name: "SPLENDOUR",
   descriptor: "Studio",
+  logo: {
+    src: "/splendour-studio-logo.svg",
+    alt: "SPLENDOUR Studio",
+  },
   siteUrl: process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, ""),
   tagline: "Thoughtful design. Serious engineering.",
   description:

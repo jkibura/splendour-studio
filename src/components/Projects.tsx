@@ -13,14 +13,17 @@ const gridSpanClasses: Record<Project["gridSpan"], string> = {
 };
 
 function ProjectImage({ project }: { project: Project }) {
+  const image = project.cardImage ?? project.image;
+  const alt = project.cardImageAlt ?? project.imageAlt;
+
   return (
     <div className="project-image relative min-h-68 overflow-hidden bg-[var(--color-image-placeholder)] sm:min-h-80">
       <Image
-        src={project.image}
-        alt={project.imageAlt}
+        src={image}
+        alt={alt}
         fill
         sizes="(min-width: 768px) 58vw, 100vw"
-        className={`object-cover transition-transform duration-500 group-hover:scale-[1.025] ${projectImageFocusClasses[project.imageFocus ?? "center"]}`}
+        className={`object-cover transition-transform duration-500 group-hover:scale-[1.025] ${projectImageFocusClasses[project.cardImageFocus ?? project.imageFocus ?? "center"]}`}
       />
     </div>
   );

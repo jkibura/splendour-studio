@@ -1,4 +1,5 @@
 import { ArrowUpRight, Check } from "lucide-react";
+import Image from "next/image";
 import { siteConfig } from "../../data/siteConfig";
 import { pageContent } from "../../data/content";
 import { Button } from "./ui/Button";
@@ -103,15 +104,15 @@ export function CTA() {
             <a
               href="#hero-content"
               aria-label="SPLENDOUR Studio, back to top"
-              className="inline-flex w-fit flex-col leading-none"
+              className="inline-flex w-fit items-center rounded-sm transition-opacity hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-zinc-900"
             >
-              <span className="text-sm font-semibold tracking-[0.19em] text-zinc-950">
-                {siteConfig.name}
-              </span>
-
-              <span className="mt-1.5 self-end text-[9px] font-medium tracking-[0.3em] text-zinc-500">
-                {siteConfig.descriptor.toUpperCase()}
-              </span>
+              <Image
+                src={siteConfig.logo.src}
+                alt=""
+                width={252}
+                height={56}
+                className="h-9 w-auto"
+              />
             </a>
 
             <p className="text-xs leading-5 text-zinc-500">

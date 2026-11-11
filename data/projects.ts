@@ -44,6 +44,9 @@ export const projects: Project[] = [
     image: "/projects/psychology.webp",
     imageAlt: "Psychology practice homepage for Dr. Sarah Mitchell, PsyD",
     imageFocus: "far-right",
+    cardImage: "/projects/psychology-practice.svg",
+    cardImageAlt: "Minimal illustrated preview of the psychology practice website",
+    cardImageFocus: "center",
     gridSpan: 12,
     status: "Client project",
     url: "https://psyd-two.vercel.app"

@@ -6,6 +6,7 @@ export interface NavigationLink {
 export interface SiteConfig {
   name: string;
   descriptor: string;
+  logo: { src: string; alt: string };
   siteUrl?: string;
   tagline: string;
   description: string;
@@ -41,6 +42,9 @@ export interface Project {
   image: string;
   imageAlt: string;
   imageFocus?: "center" | "right" | "far-right";
+  cardImage?: string;
+  cardImageAlt?: string;
+  cardImageFocus?: "center" | "right" | "far-right";
   url?: string;
   caseStudy?: {
     challenge: string;

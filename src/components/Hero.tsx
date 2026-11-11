@@ -276,6 +276,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import {
   ArrowDown,
   ArrowRight,
@@ -301,14 +302,16 @@ export function Hero() {
           <a
             href="#hero-content"
             aria-label="SPLENDOUR Studio home"
-            className="flex shrink-0 flex-col leading-none"
+            className="inline-flex shrink-0 items-center rounded-sm transition-opacity hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-zinc-900"
           >
-            <span className="text-base font-bold tracking-[0.16em] text-zinc-950">
-                {siteConfig.name}
-            </span>
-            <span className="mt-1.5 self-end text-[9px] font-medium tracking-[0.3em] text-zinc-500">
-              {siteConfig.descriptor.toUpperCase()}
-            </span>
+            <Image
+              src={siteConfig.logo.src}
+              alt={siteConfig.logo.alt}
+              width={252}
+              height={56}
+              priority
+              className="h-11 w-auto"
+            />
           </a>
 
           <nav
