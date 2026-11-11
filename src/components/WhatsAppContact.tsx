@@ -18,6 +18,7 @@ export function WhatsAppContact() {
       notification={false}
       notificationSound={false}
       style={{ zIndex: 40 }}
+      buttonStyle={{ transform: "scale(0.8)" }}
     />
   );
 }

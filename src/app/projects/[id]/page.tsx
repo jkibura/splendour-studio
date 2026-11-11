@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import { projects } from "../../../../data/projects";
 import { projectPageContent } from "../../../../data/projectPages";
 import { siteConfig } from "../../../../data/siteConfig";
+import { projectImageFocusClasses } from "../../../lib/projectImageFocus";
 
 interface ProjectPageProps {
   params: Promise<{ id: string }>;
@@ -45,8 +46,8 @@ export default async function ProjectPage({ params }: ProjectPageProps) {
           </div>
         </header>
 
-        <div className="relative aspect-[16/9] overflow-hidden rounded-[1.5rem] border border-zinc-200 bg-[var(--color-image-placeholder)] sm:rounded-[2rem]">
-          <Image src={project.image} alt={project.imageAlt} fill priority sizes="(min-width: 1280px) 1280px, 100vw" className="object-cover" />
+        <div className="relative aspect-[4/3] overflow-hidden rounded-[1.5rem] border border-zinc-200 bg-[var(--color-image-placeholder)] md:aspect-[16/9] sm:rounded-[2rem]">
+          <Image src={project.image} alt={project.imageAlt} fill priority sizes="(min-width: 1280px) 1280px, 100vw" className={`object-cover ${projectImageFocusClasses[project.imageFocus ?? "center"]}`} />
         </div>
 
         <div className="grid gap-10 border-b border-zinc-200 py-12 sm:py-16 md:grid-cols-[0.65fr_1fr] md:gap-16">

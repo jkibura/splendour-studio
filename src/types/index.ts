@@ -39,6 +39,7 @@ export interface Project {
   tags: string[];
   image: string;
   imageAlt: string;
+  imageFocus?: "center" | "right" | "far-right";
   url?: string;
   caseStudy?: {
     challenge: string;

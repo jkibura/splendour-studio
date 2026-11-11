@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import type { Project } from "../types";
+import { projectImageFocusClasses } from "../lib/projectImageFocus";
 import { projects, projectsContent } from "../../data/projects";
 import { Card } from "./ui/Card";
 
@@ -13,13 +14,13 @@ const gridSpanClasses: Record<Project["gridSpan"], string> = {
 
 function ProjectImage({ project }: { project: Project }) {
   return (
-    <div className="project-image relative aspect-16/9 overflow-hidden bg-[var(--color-image-placeholder)]">
+    <div className="project-image relative aspect-[4/3] overflow-hidden bg-[var(--color-image-placeholder)] md:aspect-[16/9]">
       <Image
         src={project.image}
         alt={project.imageAlt}
         fill
         sizes="(min-width: 768px) 58vw, 100vw"
-        className="object-cover transition-transform duration-500 group-hover:scale-[1.025]"
+        className={`object-cover transition-transform duration-500 group-hover:scale-[1.025] ${projectImageFocusClasses[project.imageFocus ?? "center"]}`}
       />
     </div>
   );
