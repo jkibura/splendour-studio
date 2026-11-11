@@ -10,6 +10,12 @@ export interface SiteConfig {
   description: string;
   locationLabel: string;
   contactEmail: string;
+  whatsapp: {
+    phoneNumber: string;
+    accountName: string;
+    statusMessage: string;
+    chatMessage: string;
+  };
   navLinks: NavigationLink[];
   footerNote: string;
 }
@@ -34,6 +40,11 @@ export interface Project {
   image: string;
   imageAlt: string;
   url?: string;
+  caseStudy?: {
+    challenge: string;
+    approach: string;
+    outcome?: string;
+  };
   gridSpan: ProjectGridSpan;
   status: "Concept study" | "Client project";
 }

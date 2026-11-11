@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import type { Project } from "../types";
 import { projects, projectsContent } from "../../data/projects";
@@ -44,7 +45,7 @@ export function Projects() {
           <p className="max-w-sm text-sm leading-6 text-zinc-600">{projectsContent.introduction}</p>
         </div>
 
-        <div className="mt-10 grid grid-cols-1 gap-5 md:grid-cols-12">
+        <div className="mt-14 grid grid-cols-1 gap-7 md:mt-16 md:grid-cols-12 md:gap-8">
           {projects.map((project) => (
             <article key={project.id} className={gridSpanClasses[project.gridSpan]}>
               <Card className="group h-full overflow-hidden rounded-[1.4rem] border-zinc-200 shadow-none transition-colors duration-200 hover:border-zinc-300">
@@ -57,7 +58,7 @@ export function Projects() {
                     </div>
                     <p className="mt-5 text-[10px] font-semibold uppercase tracking-[0.15em] text-zinc-500">{project.category}</p>
                     <div className="mt-2 flex items-start justify-between gap-4">
-                      <h3 className="text-2xl font-semibold tracking-[-0.045em] text-zinc-950 sm:text-[1.7rem]">{project.title}</h3>
+                      <h3 className="text-2xl font-semibold tracking-[-0.045em] text-zinc-950 sm:text-[1.7rem]"><Link href={`/projects/${project.id}`} className="rounded-sm transition-colors hover:text-zinc-600 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-zinc-900">{project.title}</Link></h3>
                       {project.url ? (
                         <a href={project.url} target="_blank" rel="noreferrer" aria-label={`Visit ${project.title}`} className="mt-1 flex size-9 shrink-0 items-center justify-center rounded-full border border-zinc-200 text-zinc-600 transition-all group-hover:border-zinc-900 group-hover:bg-zinc-900 group-hover:text-white">
                           <ArrowUpRight size={16} strokeWidth={1.7} />
@@ -69,9 +70,12 @@ export function Projects() {
                       )}
                     </div>
                     <p className="mt-4 max-w-xl text-sm leading-6 text-zinc-600">{project.description}</p>
-                    <div className="mt-auto flex flex-wrap gap-2 pt-6">
+                    <div className="mt-auto flex flex-wrap gap-2 pt-7">
                       {project.tags.map((tag) => <span key={tag} className="rounded-full bg-zinc-100 px-2.5 py-1.5 text-[10px] font-medium text-zinc-600">{tag}</span>)}
                     </div>
+                    <Link href={`/projects/${project.id}`} className="mt-6 inline-flex w-fit items-center gap-2 text-xs font-semibold text-zinc-800 transition-colors hover:text-zinc-500">
+                      {projectsContent.detailLink} <ArrowUpRight size={14} strokeWidth={1.8} aria-hidden="true" />
+                    </Link>
                   </div>
                 </div>
               </Card>

@@ -8,6 +8,12 @@ export const siteConfig: SiteConfig = {
     "An independent digital studio creating considered websites and web experiences for ambitious businesses.",
   locationLabel: "Independent digital studio · Kenya & beyond",
   contactEmail: "jkibura001@gmail.com",
+  whatsapp: {
+    phoneNumber: "254799805123",
+    accountName: "SPLENDOUR Studio",
+    statusMessage: "Typically replies within a business day",
+    chatMessage: "Hello! I’d like to discuss a project.",
+  },
   navLinks: [
     {
       label: "Services",

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import type { ReactNode } from "react";
 import { siteConfig } from "../../data/siteConfig";
+import { WhatsAppContact } from "../components/WhatsAppContact";
 import "./globals.css";
 
 const inter = Inter({
@@ -39,7 +40,10 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" className={inter.variable}>
-      <body>{children}</body>
+      <body>
+        {children}
+        <WhatsAppContact />
+      </body>
     </html>
   );
 }
